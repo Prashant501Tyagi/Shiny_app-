@@ -1,0 +1,36 @@
+data("iris")
+data()
+View(iris)
+dim(iris)
+str(iris)
+names(iris)
+attributes(iris)
+sum(is.na(iris))
+
+iris$Sepal.Length <- as.integer(iris$Petal.Length)
+mean(iris$Petal.Length)
+IQR(iris$Petal.Length)
+range(iris$Petal.Length)
+var(iris$Petal.Length)
+sd(iris$Petal.Length)
+summary(iris)
+quantile(iris$Petal.Length,c(0.10,0.60,0.70))
+library(Hmisc)
+describe(iris)
+hist(iris$Petal.Length)
+hist(iris$Petal.Length,col="orange",xlab="sepal length",main="histogram")
+plot(density(iris$Petal.Length))
+ggplot(data = iris,aes(Sepal.Length,fill= Species))+geom_density()
+table(iris$Species)
+
+pie(table(iris$Species),main="pie chart for species",col = c("orange","green","yellow"))
+
+barplot(table(iris$Species))
+cor(iris$Petal.Length,iris$Sepal.Width)
+plot(iris$Petal.Length,iris$Petal.Width)
+
+boxplot(iris$Petal.Length)
+
+boxplot(data=iris,Sepal.Length)
+
+pairs(iris[,1:4])
